@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    >
+<com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/single_appbar">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/single_toolbar"
+        app:title="Edited on dd-yy-mm"
+        app:titleCentered="true"
+        android:elevation="0dp"
+        app:navigationIcon="@drawable/baseline_arrow_back_24"
+        android:background="@color/white"
+        >
+    </com.google.android.material.appbar.MaterialToolbar>
+</com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/single_appbar">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/notestitle"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:padding="10dp"
+            android:textSize="25sp"
+            android:maxLines="2"
+            android:hint="Enter Title here"
+            />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/notesdesc"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:hint="Enter Note description"/>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>
